@@ -1,0 +1,88 @@
+html * {
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body, body > * {
+    height: 100%;
+    overflow: hidden;
+}
+
+.server-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.server-down > div {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+
+.app {
+    max-width: 800px;
+    margin: auto;
+    padding: 1em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app .messages {
+    overflow-y: auto;
+    height: calc(100% - 7em);
+}
+
+.app li {
+    width: 80%;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: rgb(236, 236, 236);
+    border-radius: 3px;
+}
+
+.app li *:not(:last-child) {
+    padding-bottom: 0.3em;
+}
+
+.app .author, .app .datetime {
+    color: lightskyblue;
+}
+
+.app .content {
+    color: navy;
+    word-wrap: break-word;
+}
+
+.app .me {
+    margin-left: 20%;
+}
+
+.app .me .author, .app .me .datetime {
+    text-align: right;
+}
+
+.app .controls {
+    display: flex;
+    height: 7em;
+    padding: 1em;
+    background-color: lightgrey; 
+}
+
+.app textarea {
+    flex: 1 1 auto;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+    font-family: monospace;
+}
+
+.app button {
+    flex: 0 0 20%;
+    background-color: transparent;
+    border: none;
+    color: navy; 
+    font-weight: 700;
+}
